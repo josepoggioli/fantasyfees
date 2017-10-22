@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  fee: 1.5
+  fee_due_date: MyString
+  league_code: MyString
+
+two:
+  name: MyString
+  fee: 1.5
+  fee_due_date: MyString
+  league_code: MyString

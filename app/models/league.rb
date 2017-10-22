@@ -1,0 +1,6 @@
+class League < ApplicationRecord
+  has_many :user_leagues
+  has_many :users, through: :user_leagues
+
+  validates :name, :fee, :fee_due_date, presence: true
+end
