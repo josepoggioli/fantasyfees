@@ -1,0 +1,2 @@
+class UserLeaguesController < ApplicationController
+end

@@ -1,0 +1,29 @@
+<h1>Edit User Info</h1>
+<%= form_tag "/users/#{current_user.id}", method: :patch do %>
+  <div>
+    First Name: <input type="text" name="first_name" value="<%= current_user.first_name %>">
+  </div>
+  <div>
+    Last Name: <input type="text" name="last_name" value="<%= current_user.last_name %>">
+  </div>
+  <div>
+    Email: <input type="text" name="email" value="<%= current_user.email %>">
+  </div>
+  <input type="submit" value="Save"><br/><br/>
+<% end %>
+<h5>Change Password:</h5>
+<%= form_tag "/users/#{current_user.id}", method: :patch do %>
+  <div>
+    Current Password: <input type="password" name="current_password" value="">
+  </div>
+  <div>
+    New Password: <input type="password" name="password" value="">
+  </div>
+  <div>
+    Confirm new Password: <input type="password" name="password_confirmation" value="">
+  </div>
+  <input type="hidden" name="first_name" value="<%= current_user.first_name %>">
+  <input type="hidden" name="last_name" value="<%= current_user.last_name %>">
+  <input type="hidden" name="email" value="<%= current_user.email %>">
+  <input type="submit" value="Save">
+<% end %>

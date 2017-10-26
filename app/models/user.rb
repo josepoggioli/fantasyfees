@@ -6,4 +6,9 @@ class User < ApplicationRecord
   validates :username, :first_name, :last_name, :email, presence: true
   validates :first_name,:last_name, length: {minimum: 2}
   validates :email, uniqueness: true
+
+  def full_name
+    return first_name + " " + last_name
+  end
+
 end
