@@ -1,0 +1,13 @@
+<h1>Create League</h1>
+<%= form_tag '/leagues', method: :post do  %>
+   <div>
+     Name: <input id="name" name="name" type="text" />
+   </div>
+   <div>
+    Payment deadline: <input id="fee_due_date" name="fee_due_date" type="date" value= />
+   </div>
+   <div>
+    Fee: $<input id="fee" name="fee" type="number" />
+   </div>
+  <%= submit_tag "Create" %>
+ <% end %> 

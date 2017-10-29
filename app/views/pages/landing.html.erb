@@ -1,1 +1,20 @@
 <h1>Landing page</h1>
+<h2>Leagues</h2>
+<h3><a href='/leagues/new'>Create League</a></h3>
+<h3><a href='/'>Join League</a></h3>
+<table>
+  <tr>
+    <th>League</th>
+    <th>Fee</th>
+    <th>Paid</th>
+  </tr>
+  <% current_user.leagues.each do |league|  %>
+  <tr>  
+    <td><a href="/leagues/<%= league.id %>"><%= league.name %></a></td>
+    <td>$<%= league.fee %></td>
+    <td><%= league.user_leagues.find_by(user_id:current_user.id).fee_payed %></td>
+  </tr>
+  <% end %>
+</table>
+<br/>
+<h2>Activity</h2>

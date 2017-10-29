@@ -1,0 +1,34 @@
+<h1><%= @league.name %>
+  <% if @league.user_leagues.find_by(user_id:current_user.id).admin %>
+  <button type="button" class="btn btn-primary">Settings</button>
+  <% end %>
+</h1>
+<h4>Status
+<% if @league.user_leagues.find_by(user_id:current_user.id).fee_payed %>
+<button type="button" class="btn btn-success">Paid</button>
+<% else %>
+<button type="button" class="btn btn-danger">Not Paid</button>
+<% end %>
+</h4>
+<h4>Fee $<%= @league.fee %> Due date: <%= @league.fee_due_date %></h4>
+<table>
+  <tr>
+    <th>Members</th>
+    <th>Paid</th>
+  </tr>
+  <% @league.users.each do |user| %>
+  <tr>
+    <th><%= user.full_name %></th>
+    <th>
+      <% if user.user_leagues.find_by(league_id:@league.id).fee_payed %>
+      <img src="/assets/images/paid.png" alt="paid" height="35px" width="35px"> 
+      <% else %>
+       <img src="/assets/not-paid.png" alt="not-paid" height="35px" width="35px">
+       <% end %>
+    </th>
+  </tr>
+  <% end %>
+</table>
+<% if @league.user_leagues.find_by(user_id:current_user.id).admin %>
+  <button type="button" class="btn btn-primary">Send Invitation</button>
+<% end %>

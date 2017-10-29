@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get "/" => "pages#index"
-  get "/landing" => "pages#landing"
 
   get "/signup" => "users#new"
   post "/users" => "users#create"
@@ -13,9 +12,9 @@ Rails.application.routes.draw do
   post "/login" => "sessions#create"
   get "/logout" => "sessions#destroy"
 
-  #get "/leagues/new" => "leagues#new"
-  #post "/leagues" => "leagues#create"
-  #get "/leagues/:id" => "leagues#show"
+  get "/leagues/new" => "leagues#new"
+  post "/leagues" => "leagues#create"
+  get "/leagues/:id" => "leagues#show"
   #get "/leagues/:id/edit" => "leagues#edit"
   #patch "/leagues/:id" => "leagues#update"
   #delete "/leagues/:id" => "leagues#destroy"

@@ -1,28 +1,22 @@
 <h1>Sign Up</h1>
 <%= form_tag '/users', method: :post do  %>
    <div>
-     <%= label_tag :username %>
-     <%= text_field_tag :username %>
+     Username <input id="username" name="username" type="text" />
    </div>
    <div>
-     <%= label_tag :email %>
-     <%= text_field_tag :email %>
+     Email <input id="email" name="email" type="email" />
    </div>
    <div>
-     <%= label_tag :first_name %>
-     <%= text_field_tag :first_name %>
+     First Name <input id="first_name" name="first_name" type="text" />
    </div>
    <div>
-     <%= label_tag :last_name %>
-     <%= text_field_tag :last_name %>
+     Last Name <input id="last_name" name="last_name" type="text" />
    </div>
    <div>
-     <%= label_tag :password %>
-     <%= password_field_tag :password %>
+     Password <input id="password" name="password" type="password" />
    </div>
    <div>
-     <%= label_tag :password_confirmation %>
-     <%= password_field_tag :password_confirmation %>
+     Confirm password <input id="password_confirmation" name="password_confirmation" type="password" />    
    </div>
   <%= submit_tag "Submit" %>
  <% end %> 

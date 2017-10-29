@@ -1,7 +1,10 @@
 class SessionsController < ApplicationController
 
   def new 
-
+    @create_league = false
+    if flash[:warning]== "You need to sign in to be able to create a league."
+      @create_league = true
+    end
   end
 
   def create
@@ -9,7 +12,11 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       flash[:success] = "Successfully Logged in!"
-      redirect_to "/landing"
+      if params[:create_league] == "true" 
+        redirect_to "/leagues/new"
+      else 
+        redirect_to "/"
+      end
     else
       flash[:warning] = "Invalid email or password."
       redirect_to "/login"
