@@ -1,0 +1,7 @@
+<h1>Join a league</h1>
+<%= form_tag '/leagues/new_join', method: :post do  %>
+   <div>
+     Enter league code: <input id="league_code" name="league_code" type="text" />
+   </div>
+   <input type="submit" class="btn btn-primary" value="Join">
+ <% end %> 

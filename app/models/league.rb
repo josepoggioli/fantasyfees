@@ -4,4 +4,8 @@ class League < ApplicationRecord
 
   validates :name, :fee, :fee_due_date, presence: true
 
+  def code
+    return league_code
+  end
+
 end

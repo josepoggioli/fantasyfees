@@ -14,9 +14,15 @@ Rails.application.routes.draw do
 
   get "/leagues/new" => "leagues#new"
   post "/leagues" => "leagues#create"
+  get "/leagues/join" => "leagues#join"
+  post "/leagues/new_join" => "leagues#new_join"
   get "/leagues/:id" => "leagues#show"
-  #get "/leagues/:id/edit" => "leagues#edit"
-  #patch "/leagues/:id" => "leagues#update"
-  #delete "/leagues/:id" => "leagues#destroy"
+  get "/leagues/:id/edit" => "leagues#edit"
+  patch "/leagues/:id" => "leagues#update"
+  delete "/leagues/:id" => "leagues#destroy"
+  get "/leagues/:id/invitation" => "leagues#invitation"
+
+  get "/user_leagues/:id/payment" => "leagues#payment"
+
 
 end

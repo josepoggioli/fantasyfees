@@ -1,0 +1,16 @@
+<h1>Edit Settings</h1>
+<%= form_tag "/leagues/#{@league.id}", method: :patch do %>
+  <div>
+     Name: <input id="name" name="name" type="text" value=<%= @league.name %> />
+   </div>
+   <div>
+    Payment deadline: <input id="fee_due_date" name="fee_due_date" type="date" value=<%= @league.fee_due_date %> />
+   </div>
+   <div>
+    Fee: $<input id="fee" name="fee" type="number" value=<%= @league.fee %> />
+   </div>
+  <input type="submit" class="btn btn-primary" value="Save">
+ <% end %> 
+<%= form_tag "/leagues/#{@league.id}", method: :delete do %>
+  <input class="btn btn-danger" type="submit" value="Delete">
+<% end %>
