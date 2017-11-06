@@ -24,13 +24,13 @@
     <th><%= user.full_name %></th>
     <th>
       <% if user.user_leagues.find_by(league_id:@league.id).fee_payed %>
-      <img src="/assets/images/paid.png" alt="paid" height="35px" width="35px"> 
+      <img src="/assets/paid.png" alt="paid" height="35px" width="35px"> 
       <% else %>
        <img src="/assets/not-paid.png" alt="not-paid" height="35px" width="35px">
        <% end %>
     </th>
     <% if @league.user_leagues.find_by(user_id:current_user.id).admin %>
-    <th><button type="button" class="btn btn-info">edit</button></th>
+    <th><a href="/user_leagues/<%= @league.user_leagues.find_by(user_id:user.id).id %>"><button type="button" class="btn btn-info">edit</button></a></th>
     <% end %>
   </tr>
   <% end %>

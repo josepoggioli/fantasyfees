@@ -1,0 +1,24 @@
+<h1><%= @user_league.user.full_name %></h1>
+<h4>Fee $<%= @user_league.league.fee %> Due date: <%= @user_league.league.fee_due_date %></h4>
+<h4>Status
+<% if @user_league.fee_payed %>
+<button type="button" class="btn btn-success">Paid</button>
+<% else %>
+<button type="button" class="btn btn-danger">Not Paid</button>
+<% end %>
+</h4>
+<%= form_tag "/user_leagues/#{@user_league.id}", method: :patch do  %>
+<% if @user_league.fee_payed %>
+<button type="submit" class="btn btn-info">Reverse Payment</button>
+<% else %>
+<button type="submit" class="btn btn-info">Confirm Payment</button>
+<% end %>
+<% end %>
+<% if !@user_league.admin %>
+  <%= form_tag "/user_leagues/#{@user_league.id}", method: :delete do  %>
+  <input class="btn btn-danger" type="submit" value="Remove user">
+  <% end %>
+<% end %> 
+<a href="/leagues/<%= @user_league.league.id %>">back to league</a>
+
+

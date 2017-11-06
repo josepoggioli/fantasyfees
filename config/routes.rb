@@ -22,7 +22,9 @@ Rails.application.routes.draw do
   delete "/leagues/:id" => "leagues#destroy"
   get "/leagues/:id/invitation" => "leagues#invitation"
 
-  get "/user_leagues/:id/payment" => "leagues#payment"
+  get "/user_leagues/:id" => "user_leagues#show"
+  patch "/user_leagues/:id" => "user_leagues#edit"
+  delete "/user_leagues/:id" => "user_leagues#delete"
 
 
 end

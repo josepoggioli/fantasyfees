@@ -61,7 +61,7 @@ class UsersController < ApplicationController
 
   def destroy
     current_user.destroy
-    flash[:danger] = "User succesfully destroyed!"
+    flash[:danger] = "User succesfully deleted!"
     redirect_to "/"
   end
 
