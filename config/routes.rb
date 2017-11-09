@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+
   get "/" => "pages#index"
 
   get "/signup" => "users#new"
@@ -25,6 +27,11 @@ Rails.application.routes.draw do
   get "/user_leagues/:id" => "user_leagues#show"
   patch "/user_leagues/:id" => "user_leagues#edit"
   delete "/user_leagues/:id" => "user_leagues#delete"
+
+  #get 'charges/new'
+  #get 'charges/create'
+  resources :charges, only: [:new, :create]
+  get 'thanks', to: 'charges#thanks', as: 'thanks'
 
 
 end
