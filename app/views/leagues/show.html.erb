@@ -11,6 +11,7 @@
 <% end %>
 </h4>
 <h4>Fee $<%= @league.fee %> Due date: <%= @league.fee_due_date %></h4>
+<a href="/payments/new/<%= @league.user_leagues.find_by(user_id:current_user.id).id %>"><button type="button" class="btn btn-warning">Make a payment</button></a>
 <table>
   <tr>
     <th>Members</th>

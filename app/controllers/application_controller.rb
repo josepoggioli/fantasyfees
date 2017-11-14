@@ -8,7 +8,10 @@ class ApplicationController < ActionController::Base
 
  
   def authenticate_user!
-    redirect_to '/login' unless current_user
+    unless current_user
+    flash[:warning] = "You must login in order to continue."
+    redirect_to '/login' 
+    end
   end
   
 end

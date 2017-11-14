@@ -28,10 +28,16 @@ Rails.application.routes.draw do
   patch "/user_leagues/:id" => "user_leagues#edit"
   delete "/user_leagues/:id" => "user_leagues#delete"
 
+  get "/payments/new/:id" => "payments#new"
+  post "/payments" => "payments#create"
+  get "/payments/:id" => "payments#show"
+  get "payments/error" => "payments#error"
+
+
   #get 'charges/new'
   #get 'charges/create'
-  resources :charges, only: [:new, :create]
-  get 'thanks', to: 'charges#thanks', as: 'thanks'
+  #resources :charges, only: [:new, :create]
+  #get 'thanks', to: 'charges#thanks', as: 'thanks'
 
 
 end
