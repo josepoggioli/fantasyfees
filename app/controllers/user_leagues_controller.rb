@@ -6,13 +6,22 @@ class UserLeaguesController < ApplicationController
 
   def edit
     @user_league = UserLeague.find(params[:id])
-    @user_league.fee_payed = !@user_league.fee_payed
-    if @user_league.save
-      flash[:success] = "Payment confirmed!"
-      redirect_to "/user_leagues/#{@user_league.id}" 
+    payment = Payment.new(
+      amount: params[:amount].to_i*100,
+      user_league_id: params[:user_league_id]
+    )
+
+    if (@user_league.league.fee - @user_league.total_payments) - (payment.amount/100) < 0
+      flash[:warning] = "The payment is larger than the user's balance. Please try the payment again."
+      redirect_to "/user_leagues/#{@user_league.id}"
     else
-      flash[:warning] = "Payment did not get change"
-      redirect_to "/user_leagues/#{@user_league.id}" 
+      if payment.save
+        flash[:success] = "Payment confirmed!"
+        redirect_to "/user_leagues/#{@user_league.id}"
+      else
+        flash[:warning] = "Payment did not get change"
+        redirect_to "/user_leagues/#{@user_league.id}" 
+      end
     end
   end
 

@@ -1,1 +1,5 @@
 <p>Thanks for your payment of <%= pretty_amount(@payment.amount) %>!</p>
+<p>Total payments: <%= @payment.user_league.total_payments %></p>
+<p>League Fee: <%= @payment.user_league.league.fee %></p>
+<p>is fee paid: <%= @payment.user_league.isFeePaid? %></p>
+<p>fee_payed: <%= @payment.user_league.fee_payed %></p>

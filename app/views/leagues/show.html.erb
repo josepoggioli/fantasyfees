@@ -4,18 +4,23 @@
   <% end %>
 </h1>
 <h4>Status
-<% if @league.user_leagues.find_by(user_id:current_user.id).fee_payed %>
+<% if @league.user_leagues.find_by(user_id:current_user.id).isFeePaid? %>
 <button type="button" class="btn btn-success">Paid</button>
 <% else %>
 <button type="button" class="btn btn-danger">Not Paid</button>
 <% end %>
 </h4>
 <h4>Fee $<%= @league.fee %> Due date: <%= @league.fee_due_date %></h4>
-<a href="/payments/new/<%= @league.user_leagues.find_by(user_id:current_user.id).id %>"><button type="button" class="btn btn-warning">Make a payment</button></a>
+<% if !current_user.user_leagues.find_by(league_id:@league.id).isFeePaid? %>
+<a href="/payments/new/<%= @league.user_leagues.find_by(user_id:current_user.id).id %>" class="btn btn-warning" role="button">Make a payment</a>
+<% else %>
+<a href="/payments/new/<%= @league.user_leagues.find_by(user_id:current_user.id).id %>" class="btn btn-warning disabled" role="button" aria-disabled="false">Make a payment</a>
+<% end %>
 <table>
   <tr>
     <th>Members</th>
     <th>Paid</th>
+    <th>Total</th>
     <% if @league.user_leagues.find_by(user_id:current_user.id).admin %>
     <th></th>
     <% end %>
@@ -24,11 +29,14 @@
   <tr>
     <th><%= user.full_name %></th>
     <th>
-      <% if user.user_leagues.find_by(league_id:@league.id).fee_payed %>
+      <% if user.user_leagues.find_by(league_id:@league.id).isFeePaid? %>
       <img src="/assets/paid.png" alt="paid" height="35px" width="35px"> 
       <% else %>
        <img src="/assets/not-paid.png" alt="not-paid" height="35px" width="35px">
        <% end %>
+    </th>
+    <th>
+      $<%= user.user_leagues.find_by(league_id:@league.id).total_payments %>
     </th>
     <% if @league.user_leagues.find_by(user_id:current_user.id).admin %>
     <th><a href="/user_leagues/<%= @league.user_leagues.find_by(user_id:user.id).id %>"><button type="button" class="btn btn-info">edit</button></a></th>
@@ -39,3 +47,10 @@
 <% if @league.user_leagues.find_by(user_id:current_user.id).admin %>
   <a href="/leagues/<%= @league.id %>/invitation"><button type="button" class="btn btn-primary">Send Invitation</button></a>
 <% end %>
+<h2>Activity</h2>
+<ul>
+  <%  current_user.user_leagues.find_by(league_id:@league.id).payments.each do |payment|%>
+  <li>You made a $<%= payment.pretty_amount %> payment on <%= payment.created_at.strftime("%b %e, %l:%M %p") %></li>
+  <% end %>
+</ul>
+

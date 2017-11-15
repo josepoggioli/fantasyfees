@@ -12,7 +12,7 @@
     <td><a href="/leagues/<%= league.id %>"><%= league.name %></a></td>
     <td>$<%= league.fee %></td>
     <td>
-    <% if league.user_leagues.find_by(user_id:current_user.id).fee_payed %>
+    <% if league.user_leagues.find_by(user_id:current_user.id).isFeePaid? %>
     <img src="/assets/paid.png" alt="paid" height="35px" width="35px"> 
     <% else %>
     <img src="/assets/not-paid.png" alt="not-paid" height="35px" width="35px">
@@ -22,4 +22,3 @@
   <% end %>
 </table>
 <br/>
-<h2>Activity</h2>
