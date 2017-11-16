@@ -1,0 +1,116 @@
+<!-- Widget: Lineup -->
+<aside class="widget card widget--sidebar widget-lineup">
+  <div class="widget__title card__header">
+    <h4>Lineup and Tactic</h4>
+  </div>
+  <div class="widget__content card__content">
+
+    <canvas id="soccer-lineup" class="soccer-lineup" width="316" height="460">
+      <!-- Fallback Image -->
+      <img src="assets/images/soccer/_soccer_field-lineup.jpg" alt="">
+      <!-- Fallback Image / End -->
+    </canvas>
+
+    <script>
+      var canvas = document.getElementById('soccer-lineup');
+      var context = canvas.getContext('2d');
+
+      function loadImages(sources, callback) {
+        var images = {};
+        var loadedImages = 0;
+        var numImages = 0;
+        // get num of sources
+        for(var src in sources) {
+          numImages++;
+        }
+        for(var src in sources) {
+          images[src] = new Image();
+          images[src].onload = function() {
+            if(++loadedImages >= numImages) {
+              callback(images);
+            }
+          };
+          images[src].src = sources[src];
+        }
+      }
+
+      // Players Shirt
+      var sources = {
+        player1: 'assets/images/soccer/lineup_01.png',
+        player2: 'assets/images/soccer/lineup_04.png',
+        player3: 'assets/images/soccer/lineup_03.png',
+        player4: 'assets/images/soccer/lineup_22.png',
+        player5: 'assets/images/soccer/lineup_05.png',
+        player6: 'assets/images/soccer/lineup_02.png',
+        player7: 'assets/images/soccer/lineup_08.png',
+        player8: 'assets/images/soccer/lineup_26.png',
+        player9: 'assets/images/soccer/lineup_07.png',
+        player10: 'assets/images/soccer/lineup_18.png',
+        player11: 'assets/images/soccer/lineup_09.png',
+      };
+
+      loadImages(sources, function(images) {
+        context.drawImage(images.player1, 142, 26);
+        context.drawImage(images.player2, 79, 72);
+        context.drawImage(images.player3, 207, 72);
+        context.drawImage(images.player4, 37, 137);
+        context.drawImage(images.player5, 247, 137);
+        context.drawImage(images.player6, 142, 198);
+        context.drawImage(images.player7, 63, 230);
+        context.drawImage(images.player8, 221, 230);
+        context.drawImage(images.player9, 37, 314);
+        context.drawImage(images.player10, 247, 314);
+        context.drawImage(images.player11, 142, 358);
+      });
+
+      // Player Names
+      var players = {
+        player1: 'Rodgers',
+        player2: 'Ironson',
+        player3: 'Kingster',
+        player4: 'Girobilli',
+        player5: 'Black',
+        player6: 'Arrowhead',
+        player7: 'Grass',
+        player8: 'Peterson',
+        player9: 'Messinal',
+        player10: 'Hawkins',
+        player11: 'Stevens',
+      };
+
+      drawTextBG(context, players.player1, 135, 64);
+      drawTextBG(context, players.player2, 77, 110);
+      drawTextBG(context, players.player3, 205, 110);
+      drawTextBG(context, players.player4, 33, 174);
+      drawTextBG(context, players.player5, 249, 174);
+      drawTextBG(context, players.player6, 130, 238);
+      drawTextBG(context, players.player7, 64, 269);
+      drawTextBG(context, players.player8, 215, 269);
+      drawTextBG(context, players.player9, 33, 353);
+      drawTextBG(context, players.player10, 242, 353);
+      drawTextBG(context, players.player11, 137, 398);
+
+      /// expand with color, background etc.
+      function drawTextBG(context, txt, x, y, padding) {
+        padding = padding || 6;
+
+        context.save();
+        context.font = '10px Montserrat';
+        context.textBaseline = 'top';
+        context.fillStyle = 'rgba(35,43,49,0.6)';
+
+        var width = context.measureText(txt).width;
+        context.fillRect(x-padding, y-padding+4, width+(padding*2), parseInt(context.font, 10) + (padding*1.1));
+
+
+        context.fillStyle = '#fff';
+        context.fillText(txt, x, y);
+
+        context.restore();
+      }
+
+    </script>
+
+  </div>
+</aside>
+<!-- Widget: Lineup / End -->

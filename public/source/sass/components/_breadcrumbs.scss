@@ -1,0 +1,30 @@
+/* Breadcrumbs
+/* ------------------------- */
+
+.breadcrumb {
+  padding: 3px 0;
+  margin-bottom: 0;
+  list-style: none;
+  background-color: transparent;
+  border-radius: 0;
+
+  > li {
+
+    + li::before {
+      padding: 0 2px;
+      color: $breadcrumb-divider-color !important;
+    }
+
+    > a {
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $breadcrumb-link-hover-color !important;
+      }
+    }
+  }
+
+  > .active {
+    color: $breadcrumb-link-active-color;
+  }
+}

@@ -1,0 +1,213 @@
+/*
+Template Name: Alchemists
+Template URI: https://themeforest.net/item/the-alchemists-sports-news-html-template/19106722
+Author: Dan Fisher
+Author URI: http://themeforest.net/user/dan_fisher
+Description: Sports Club and News HTML Template
+Version: 2.3.0
+*/
+
+/*
+File Name: 		style.css
+Written by: 	Dan Fisher - (http://themeforest.net/user/dan_fisher)
+Description:  General styling for template (including Header, Footer, Sidebar)
+*/
+
+/* Table of Content
+==================================================
+
+  #Common
+
+  #Base
+    - Header
+    - Header Navigation
+    - Hero Unit
+    - Pushy Panel
+    - Page Header
+    - Content
+    - Footer
+
+  #Blog
+    - Blog
+    - Posts
+    - Single Post
+    - Post Author
+    - Post Meta
+    - Related Posts
+    - Post Comments
+    - Blog Filter
+    - Blog Load More
+
+  #Widgets
+    - List
+    - Instagram
+    - Contact Info
+    - Social
+    - Tag Cloud
+    - Banner
+    - Tabbed
+    - Newsletter
+    - Match Preview
+    - Comments
+    - Twitter
+    - Featured
+    - Standings
+    - Player
+    - Game Result
+    - Poll
+    - Results
+    - Awards
+    - Games History
+    - Newslog
+    - Team Leaders
+    - Team Stats
+    - Filter Color
+    - Filter Size
+    - Filter Price
+    - Products
+
+  #Team
+    - Team Filter
+    - Team Roster
+    - Team Standings
+    - Team Glossary
+    - Team Results
+    - Team Schedule
+
+  #Player
+    - Player Heading
+    - Player Gamelog
+    - Player Season Average
+
+  #Shop
+    - Checkout Review Order
+    - Checkout Payment
+    - Account Navigation
+    - Shop Table
+    - Shop Banner
+    - Shop Filter
+    - Products
+    - Filter Color
+    - Product Tabs
+
+  #Partials
+    - Info Block
+    - Social Counter
+    - Social Links
+    - Match Preview
+    - Game Result
+    - Main News Banner
+    - Featured Carousel
+    - Content Filter
+    - Gallery
+    - Album
+    - Modal Login
+*/
+
+// Basic Imports
+@import "config/imports";
+
+// Content
+@import "content";
+
+// Components
+@import "components";
+
+// Main
+@import "common/base";
+@import "common/header";
+@import "common/header-nav";
+@import "common/hero-unit";
+@import "common/hero-slider";
+@import "common/pushy-panel";
+@import "common/page-header";
+@import "common/content";
+@import "common/footer";
+
+// Blog
+@import "blog/blog";
+@import "blog/posts";
+@import "blog/single-post";
+@import "blog/post-author";
+@import "blog/post-meta";
+@import "blog/post-related";
+@import "blog/comments";
+@import "blog/blog-filter";
+@import "blog/blog-load-more";
+
+// Widgets
+@import "widgets/widgets";
+@import "widgets/widget-lists";
+@import "widgets/widget-instagram";
+@import "widgets/widget-contact-info";
+@import "widgets/widget-contact";
+@import "widgets/widget-social";
+@import "widgets/widget-tagcloud";
+@import "widgets/widget-banner";
+@import "widgets/widget-tabbed";
+@import "widgets/widget-newsletter";
+@import "widgets/widget-preview";
+@import "widgets/widget-comments";
+@import "widgets/widget-twitter";
+@import "widgets/widget-featured";
+@import "widgets/widget-standings";
+@import "widgets/widget-player";
+@import "widgets/widget-game-result";
+@import "widgets/widget-poll";
+@import "widgets/widget-results";
+@import "widgets/widget-awards";
+@import "widgets/widget-games-history";
+@import "widgets/widget-newslog";
+@import "widgets/widget-team-leaders";
+@import "widgets/widget-team-stats";
+@import "widgets/widget-filter-color";
+@import "widgets/widget-filter-size";
+@import "widgets/widget-filter-price";
+@import "widgets/widget-products";
+@import "widgets/widget-calendar";
+@import "widgets/_soccer_widget-lineup";
+@import "widgets/_soccer_widget-commentary";
+@import "widgets/_soccer_widget-lineup-table";
+
+// Team
+@import "team/team-filter";
+@import "team/team-roster";
+@import "team/team-standings";
+@import "team/team-glossary";
+@import "team/team-results";
+@import "team/team-schedule";
+
+// Player
+@import "player/player-heading";
+@import "player/player-game-log";
+@import "player/player-season-avg";
+
+// Player
+@import "staff/staff";
+
+// Shop
+@import "shop/checkout-review-order";
+@import "shop/checkout-payment";
+@import "shop/account-nav";
+@import "shop/shop-table";
+@import "shop/shop-banner";
+@import "shop/shop-filter";
+@import "shop/products";
+@import "shop/filter-color";
+@import "shop/product-tabs";
+
+// Partials
+@import "partials/info-block";
+@import "partials/social-counter";
+@import "partials/social-links";
+@import "partials/match-preview";
+@import "partials/game-result";
+@import "partials/main-news-banner";
+@import "partials/featured-carousel";
+@import "partials/content-filter";
+@import "partials/gallery";
+@import "partials/album";
+@import "partials/modal-login";
+
+// Helpers
+@import "common/helpers";

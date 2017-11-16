@@ -1,0 +1,384 @@
+<!-- @import "partials/static/head.kit" -->
+
+  <!-- $nav_team = active -->
+
+  <!-- @import "partials/static/header.kit" -->
+
+    <!-- Page Heading
+    ================================================== -->
+    <div class="page-heading">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <h1 class="page-heading__title">Latest <span class="highlight">Results</span></h1>
+            <ol class="page-heading__breadcrumb breadcrumb">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="team-overview.html">The Team</a></li>
+              <li class="active">Latest Results</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- $team_results = content-filter__item--active -->
+    <!-- @import "partials/team/team-filter.kit" -->
+
+    <!-- Content
+    ================================================== -->
+    <div class="site-content">
+      <div class="container">
+
+        <!-- Team Latest Results -->
+        <div class="card card--has-table">
+          <div class="card__header card__header--has-btn">
+            <h4>Latest Results</h4>
+            <!-- Result Filter -->
+            <ul class="team-result-filter">
+              <li class="team-result-filter__item">
+                <select class="form-control input-xs">
+                  <option>Playoffs 2016</option>
+                  <option>Playoffs 2015</option>
+                  <option>Playoffs 2014</option>
+                </select>
+              </li>
+              <li class="team-result-filter__item">
+                <select class="form-control input-xs">
+                  <option>December 2016</option>
+                  <option>November 2016</option>
+                  <option>October 2016</option>
+                  <option>September 2016</option>
+                  <option>August 2016</option>
+                  <option>July 2016</option>
+                  <option>June 2016</option>
+                  <option>May 2016</option>
+                  <option>April 2016</option>
+                  <option>March 2016</option>
+                  <option>February 2016</option>
+                  <option>January 2016</option>
+                </select>
+              </li>
+              <li class="team-result-filter__item">
+                <select class="form-control input-xs">
+                  <option>Ascending</option>
+                  <option>Descending</option>
+                </select>
+              </li>
+              <li class="team-result-filter__item">
+                <button type="submit" class="btn btn-default btn-outline btn-xs card-header__button">Filter Latest Results</button>
+              </li>
+            </ul>
+            <!-- Result Filter / End -->
+          </div>
+          <div class="card__content">
+            <div class="table-responsive">
+              <table class="table table-hover team-result">
+                <thead>
+                  <tr>
+                    <th class="team-result__date">Date</th>
+                    <th class="team-result__vs">Versus</th>
+                    <th class="team-result__score">Score</th>
+                    <th class="team-result__status">Status</th>
+                    <th class="team-result__points">HI Points</th>
+                    <th class="team-result__rebounds">HI Rebounds</th>
+                    <th class="team-result__assists">HI Assists</th>
+                    <th class="team-result__steals">HI Steals</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="team-result__date">Saturday, Mar 24</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/sharks_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Sharks</h6>
+                          <span class="team-meta__place">Marine College</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">W</span> 107-102</td>
+                    <td class="team-result__status">Home</td>
+                    <td class="team-result__points">James Girobilli 23 (ALC)</td>
+                    <td class="team-result__rebounds">Tom Hoopstern 11 (SHR)</td>
+                    <td class="team-result__assists">Jet Valentine 6 (SHR)</td>
+                    <td class="team-result__steals">Griffin Peterson 8 (ALC)</td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Friday, Mar 16</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/pirates_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">L.A Pirates</h6>
+                          <span class="team-meta__place">Bebop Institute</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">L</span> 124-106</td>
+                    <td class="team-result__status">Away</td>
+                    <td class="team-result__points">Nick Robertson 26 (LAP)</td>
+                    <td class="team-result__rebounds">Tony Rodgers 15 (LAP)</td>
+                    <td class="team-result__assists">James Girobilli 9 (ALC)</td>
+                    <td class="team-result__steals">Robert Frankson 6 (ALC)</td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Saturday, Mar 10</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/lucky_clovers_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Lucky Clovers</h6>
+                          <span class="team-meta__place">St. Patrick’s Institute</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">L</span> 95-98</td>
+                    <td class="team-result__status">Home</td>
+                    <td class="team-result__points">James Girobilli 24 (ALC)</td>
+                    <td class="team-result__rebounds">Johnny Richards 18 (LCL)</td>
+                    <td class="team-result__assists">Robert Frankson 6 (ALC)</td>
+                    <td class="team-result__steals">Johnny Richards 10 (LCL)</td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Friday, Mar 4</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/ocean_kings_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Ocean Kings</h6>
+                          <span class="team-meta__place">Bay College</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">L</span> 110-104</td>
+                    <td class="team-result__status">Away</td>
+                    <td class="team-result__points">Edward Storm 29 (OCK)</td>
+                    <td class="team-result__rebounds">Edward Storm 14 (OCK)</td>
+                    <td class="team-result__assists">Peter Watson 6 (OCK)</td>
+                    <td class="team-result__steals">James Girobilli 9 (ALC)</td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Saturday, Feb 29</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/icarus_wings_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Red Wings</h6>
+                          <span class="team-meta__place">Icarus College</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">W</span> 102-97</td>
+                    <td class="team-result__status">Home</td>
+                    <td class="team-result__points">James Girobilli 29 (ALC)</td>
+                    <td class="team-result__rebounds">Terrence Parker 14 (RDW)</td>
+                    <td class="team-result__assists">Terrence Parker 8 (RDW)</td>
+                    <td class="team-result__steals">Robert Frankson 11 (ALC)</td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Friday, Feb 21</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/draconians_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Draconians</h6>
+                          <span class="team-meta__place">Wyvern College</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">W</span> 104-113</td>
+                    <td class="team-result__status">Away</td>
+                    <td class="team-result__points">Steven Franklin 28 (DRC)</td>
+                    <td class="team-result__rebounds">Steven Franklin 16 (DRC)</td>
+                    <td class="team-result__assists">Steven Franklin 10 (DRC)</td>
+                    <td class="team-result__steals">Griffin Peterson 8 (ALC)</td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Saturday, Feb 17</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/icarus_wings_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Icarus Wings</h6>
+                          <span class="team-meta__place">Waxer College</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">W</span> 105-94</td>
+                    <td class="team-result__status">Home</td>
+                    <td class="team-result__points">Benjamin Storm 22 (ICW)</td>
+                    <td class="team-result__rebounds">James Girobilli 19 (ALC)</td>
+                    <td class="team-result__assists">Benjamin Storm 12 (ICW)</td>
+                    <td class="team-result__steals">Robert Frankson 7 (ALC)</td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Friday, Feb 9</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/aqua_keyes_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Aqua Keyes</h6>
+                          <span class="team-meta__place">Pacific Institute</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">W</span> 102-116</td>
+                    <td class="team-result__status">Away</td>
+                    <td class="team-result__points">James Girobilli 20 (ALC)</td>
+                    <td class="team-result__rebounds">Logan Summers 16 (AQK)</td>
+                    <td class="team-result__assists">Remy Lebeau 7 (AQK)</td>
+                    <td class="team-result__steals">James Girobilli  8 (ALC)</td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Saturday, Feb 3</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/sharks_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Sharks</h6>
+                          <span class="team-meta__place">Marine College</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">W</span> 107-102</td>
+                    <td class="team-result__status">Home</td>
+                    <td class="team-result__points">James Girobilli 23 (ALC)</td>
+                    <td class="team-result__rebounds">Tom Hoopstern 11 (SHR)</td>
+                    <td class="team-result__assists">Jet Valentine 6 (SHR)</td>
+                    <td class="team-result__steals">Griffin Peterson 8 (ALC)</td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Friday, Jan 28</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/pirates_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">L.A Pirates</h6>
+                          <span class="team-meta__place">Bebop Institute</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">L</span> 124-106</td>
+                    <td class="team-result__status">Away</td>
+                    <td class="team-result__points">Nick Robertson 26 (LAP)</td>
+                    <td class="team-result__rebounds">Tony Rodgers 15 (LAP)</td>
+                    <td class="team-result__assists">James Girobilli  9 (ALC)</td>
+                    <td class="team-result__steals">Robert Frankson 6 (ALC)</td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Saturday, Jan 22</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/lucky_clovers_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Lucky Clovers</h6>
+                          <span class="team-meta__place">St. Patrick’s Institute</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">L</span> 95-98</td>
+                    <td class="team-result__status">Home</td>
+                    <td class="team-result__points">James Girobilli 24 (ALC)</td>
+                    <td class="team-result__rebounds">Johnny Richards 18 (LCL)</td>
+                    <td class="team-result__assists">James Girobilli  9 (ALC)</td>
+                    <td class="team-result__steals">Johnny Richards 10 (LCL)</td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Friday, Jan 14</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/ocean_kings_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Ocean Kings</h6>
+                          <span class="team-meta__place">Bay College</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">L</span> 110-104</td>
+                    <td class="team-result__status">Away</td>
+                    <td class="team-result__points">Edward Storm 29 (OCK)</td>
+                    <td class="team-result__rebounds">Edward Storm 14 (OCK)</td>
+                    <td class="team-result__assists">Peter Watson 6 (OCK)</td>
+                    <td class="team-result__steals">James Girobilli  9 (ALC)</td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Saturday, Jan 8</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/icarus_wings_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Red Wings</h6>
+                          <span class="team-meta__place">Icarus College</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">W</span> 102-97</td>
+                    <td class="team-result__status">Home</td>
+                    <td class="team-result__points">James Girobilli 29 (ALC)</td>
+                    <td class="team-result__rebounds">Terrence Parker 14 (RDW)</td>
+                    <td class="team-result__assists">Terrence Parker 8 (RDW)</td>
+                    <td class="team-result__steals">Robert Frankson 11 (ALC)</td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Friday, Jan 2</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/draconians_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Draconians</h6>
+                          <span class="team-meta__place">Wyvern College</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">W</span> 104-113</td>
+                    <td class="team-result__status">Away</td>
+                    <td class="team-result__points">Steven Franklin 28 (DRC)</td>
+                    <td class="team-result__rebounds">Steven Franklin 16 (DRC)</td>
+                    <td class="team-result__assists">Steven Franklin 10 (DRC)</td>
+                    <td class="team-result__steals">Griffin Peterson 8 (ALC)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- Team Latest Results / End -->
+
+      </div>
+    </div>
+
+    <!-- Content / End -->
+
+    <!-- @import "partials/static/footer.kit" -->
+  </div>
+
+  <!-- @import "partials/static/footer-scripts.kit" -->

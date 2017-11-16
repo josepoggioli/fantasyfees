@@ -1,0 +1,386 @@
+<!-- @import "partials/static/_soccer_head.kit" -->
+
+  <!-- $nav_team = active -->
+
+  <!-- @import "partials/static/_soccer_header.kit" -->
+
+    <!-- Page Heading
+    ================================================== -->
+    <div class="page-heading">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <h1 class="page-heading__title">Latest <span class="highlight">Results</span></h1>
+            <ol class="page-heading__breadcrumb breadcrumb">
+              <li><a href="_soccer_index.html">Home</a></li>
+              <li><a href="_soccer_team-overview.html">The Team</a></li>
+              <li class="active">Latest Results</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- $team_results = content-filter__item--active -->
+    <!-- @import "partials/team/_soccer_team-filter.kit" -->
+
+    <!-- Content
+    ================================================== -->
+    <div class="site-content">
+      <div class="container">
+
+        <!-- Team Latest Results -->
+        <div class="card card--has-table">
+          <div class="card__header card__header--has-btn">
+            <h4>Latest Results</h4>
+            <!-- Result Filter -->
+            <ul class="team-result-filter">
+              <li class="team-result-filter__item">
+                <select class="form-control input-xs">
+                  <option>West League 2016</option>
+                  <option>West League 2015</option>
+                  <option>West League 2014</option>
+                </select>
+              </li>
+              <li class="team-result-filter__item">
+                <select class="form-control input-xs">
+                  <option>Game Date</option>
+                  <option>December 2016</option>
+                  <option>November 2016</option>
+                  <option>October 2016</option>
+                  <option>September 2016</option>
+                  <option>August 2016</option>
+                  <option>July 2016</option>
+                  <option>June 2016</option>
+                  <option>May 2016</option>
+                  <option>April 2016</option>
+                  <option>March 2016</option>
+                  <option>February 2016</option>
+                  <option>January 2016</option>
+                </select>
+              </li>
+              <li class="team-result-filter__item">
+                <select class="form-control input-xs">
+                  <option>Ascending</option>
+                  <option>Descending</option>
+                </select>
+              </li>
+              <li class="team-result-filter__item">
+                <button type="submit" class="btn btn-default btn-outline btn-xs card-header__button">Filter Latest Results</button>
+              </li>
+            </ul>
+            <!-- Result Filter / End -->
+          </div>
+          <div class="card__content">
+            <div class="table-responsive">
+              <table class="table table-hover team-result">
+                <thead>
+                  <tr>
+                    <th class="team-result__date">Date</th>
+                    <th class="team-result__vs">Versus</th>
+                    <th class="team-result__score">Score</th>
+                    <th class="team-result__status">Status</th>
+                    <th class="team-result__ball-posession">Ball Posession</th>
+                    <th class="team-result__shots">Shots (on goal)</th>
+                    <th class="team-result__fouls">Total Fouls</th>
+                    <th class="team-result__game-overview">Game Overview</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="team-result__date">Sat, Mar 10</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/sharks_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Sharks</h6>
+                          <span class="team-meta__place">Marine College</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">W</span> 2-0</td>
+                    <td class="team-result__status">Home</td>
+                    <td class="team-result__ball-posession">62% - 38%</td>
+                    <td class="team-result__shots">25(14) - 16(6)</td>
+                    <td class="team-result__fouls">12 - 14</td>
+                    <td class="team-result__game-overview"><a href="#" class="btn btn-xs btn-default btn-outline btn-block">See Full Overview</a></td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Fri, Mar 16</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/pirates_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">L.A Pirates</h6>
+                          <span class="team-meta__place">Bebop Institute</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">L</span> 4-2</td>
+                    <td class="team-result__status">Away</td>
+                    <td class="team-result__ball-posession">58% - 42%</td>
+                    <td class="team-result__shots">28(16) - 22(11)</td>
+                    <td class="team-result__fouls">15 - 16</td>
+                    <td class="team-result__game-overview"><a href="#" class="btn btn-xs btn-default btn-outline btn-block">See Full Overview</a></td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Sat, Mar 24</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/lucky_clovers_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Lucky Clovers</h6>
+                          <span class="team-meta__place">St. Patrick’s Institute</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">D</span> 0-0</td>
+                    <td class="team-result__status">Home</td>
+                    <td class="team-result__ball-posession">46% - 54%</td>
+                    <td class="team-result__shots">24(12) - 32(18)</td>
+                    <td class="team-result__fouls">11 - 18</td>
+                    <td class="team-result__game-overview"><a href="#" class="btn btn-xs btn-default btn-outline btn-block">See Full Overview</a></td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Fri, Mar 4</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/ocean_kings_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Ocean Kings</h6>
+                          <span class="team-meta__place">Bay College</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">W</span> 2-3</td>
+                    <td class="team-result__status">Away</td>
+                    <td class="team-result__ball-posession">60% - 40%</td>
+                    <td class="team-result__shots">29(20) - 25(12)</td>
+                    <td class="team-result__fouls">19 - 14</td>
+                    <td class="team-result__game-overview"><a href="#" class="btn btn-xs btn-default btn-outline btn-block">See Full Overview</a></td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Sat, Feb 29</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/icarus_wings_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Red Wings</h6>
+                          <span class="team-meta__place">Icarus College</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">W</span> 2-1</td>
+                    <td class="team-result__status">Home</td>
+                    <td class="team-result__ball-posession">55% - 45%</td>
+                    <td class="team-result__shots">25(15) - 30(17)</td>
+                    <td class="team-result__fouls">14 - 16</td>
+                    <td class="team-result__game-overview"><a href="#" class="btn btn-xs btn-default btn-outline btn-block">See Full Overview</a></td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Fri, Feb 21</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/draconians_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Draconians</h6>
+                          <span class="team-meta__place">Wyvern College</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">L</span> 4-2</td>
+                    <td class="team-result__status">Away</td>
+                    <td class="team-result__ball-posession">47% - 53%</td>
+                    <td class="team-result__shots">22(11) - 25(18)</td>
+                    <td class="team-result__fouls">18 - 20</td>
+                    <td class="team-result__game-overview"><a href="#" class="btn btn-xs btn-default btn-outline btn-block">See Full Overview</a></td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Sat, Feb 17</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/icarus_wings_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Icarus Wings</h6>
+                          <span class="team-meta__place">Waxer College</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">D</span> 0-0</td>
+                    <td class="team-result__status">Home</td>
+                    <td class="team-result__ball-posession">61% - 39%</td>
+                    <td class="team-result__shots">26(13) - 24(10)</td>
+                    <td class="team-result__fouls">19 - 15</td>
+                    <td class="team-result__game-overview"><a href="#" class="btn btn-xs btn-default btn-outline btn-block">See Full Overview</a></td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Fri, Feb 9</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/aqua_keyes_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Aqua Keyes</h6>
+                          <span class="team-meta__place">Pacific Institute</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">W</span> 2-3</td>
+                    <td class="team-result__status">Away</td>
+                    <td class="team-result__ball-posession">52% - 48%</td>
+                    <td class="team-result__shots">22(18) - 27(8)</td>
+                    <td class="team-result__fouls">21 - 17</td>
+                    <td class="team-result__game-overview"><a href="#" class="btn btn-xs btn-default btn-outline btn-block">See Full Overview</a></td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Sat, Mar 10</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/lucky_clovers_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Lucky Clovers</h6>
+                          <span class="team-meta__place">St. Patrick’s Institute</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">W</span> 2-0</td>
+                    <td class="team-result__status">Home</td>
+                    <td class="team-result__ball-posession">62% - 38%</td>
+                    <td class="team-result__shots">25(14) - 16(6)</td>
+                    <td class="team-result__fouls">12 - 14</td>
+                    <td class="team-result__game-overview"><a href="#" class="btn btn-xs btn-default btn-outline btn-block">See Full Overview</a></td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Fri, Mar 16</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/pirates_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">L.A Pirates</h6>
+                          <span class="team-meta__place">Bebop Institute</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">L</span> 4-2</td>
+                    <td class="team-result__status">Away</td>
+                    <td class="team-result__ball-posession">58% - 42%</td>
+                    <td class="team-result__shots">28(16) - 22(11)</td>
+                    <td class="team-result__fouls">15 - 16</td>
+                    <td class="team-result__game-overview"><a href="#" class="btn btn-xs btn-default btn-outline btn-block">See Full Overview</a></td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Sat, Mar 24</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/sharks_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Sharks</h6>
+                          <span class="team-meta__place">Marine College</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">D</span> 0-0</td>
+                    <td class="team-result__status">Home</td>
+                    <td class="team-result__ball-posession">46% - 54%</td>
+                    <td class="team-result__shots">24(12) - 32(18)</td>
+                    <td class="team-result__fouls">11 - 18</td>
+                    <td class="team-result__game-overview"><a href="#" class="btn btn-xs btn-default btn-outline btn-block">See Full Overview</a></td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Fri, Mar 4</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/ocean_kings_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Ocean Kings</h6>
+                          <span class="team-meta__place">Bay College</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">W</span> 2-3</td>
+                    <td class="team-result__status">Away</td>
+                    <td class="team-result__ball-posession">60% - 40%</td>
+                    <td class="team-result__shots">29(20) - 25(12)</td>
+                    <td class="team-result__fouls">19 - 14</td>
+                    <td class="team-result__game-overview"><a href="#" class="btn btn-xs btn-default btn-outline btn-block">See Full Overview</a></td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Sat, Feb 29</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/icarus_wings_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Red Wings</h6>
+                          <span class="team-meta__place">Icarus College</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">W</span> 2-1</td>
+                    <td class="team-result__status">Home</td>
+                    <td class="team-result__ball-posession">55% - 45%</td>
+                    <td class="team-result__shots">25(15) - 30(17)</td>
+                    <td class="team-result__fouls">14 - 16</td>
+                    <td class="team-result__game-overview"><a href="#" class="btn btn-xs btn-default btn-outline btn-block">See Full Overview</a></td>
+                  </tr>
+                  <tr>
+                    <td class="team-result__date">Fri, Feb 21</td>
+                    <td class="team-result__vs">
+                      <div class="team-meta">
+                        <figure class="team-meta__logo">
+                          <img src="assets/images/samples/logos/draconians_shield.png" alt="">
+                        </figure>
+                        <div class="team-meta__info">
+                          <h6 class="team-meta__name">Draconians</h6>
+                          <span class="team-meta__place">Wyvern College</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="team-result__score"><span class="team-result__game">L</span> 4-2</td>
+                    <td class="team-result__status">Away</td>
+                    <td class="team-result__ball-posession">47% - 53%</td>
+                    <td class="team-result__shots">22(11) - 25(18)</td>
+                    <td class="team-result__fouls">18 - 20</td>
+                    <td class="team-result__game-overview"><a href="#" class="btn btn-xs btn-default btn-outline btn-block">See Full Overview</a></td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- Team Latest Results / End -->
+
+      </div>
+    </div>
+
+    <!-- Content / End -->
+
+    <!-- @import "partials/static/_soccer_footer.kit" -->
+  </div>
+
+  <!-- @import "partials/static/footer-scripts.kit" -->

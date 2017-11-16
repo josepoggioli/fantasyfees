@@ -1,36 +1,195 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Fantasyfees</title>
-    <%= csrf_meta_tags %>
+<html lang="zxx">
+    <head>
+        
+        <!-- Basic Page Needs
+        ================================================== -->
+        <title>Jogo - Soccer Club & News HTML Template</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="csrf_token" content="dX8sJxwGcv9Wbe2eb4hKtqWoatEf8K6mkhrb5RAq"/>
+        <meta name="description" content="Jogo - Sports News HTML Template">
+        <meta name="author" content="Dan Fisher">
+        <meta name="keywords" content="Sports News HTML Template">
+        
+        <!-- Favicons
+        ================================================== -->
+        <link rel="shortcut icon" href="/assets/images/soccer/favicons/favicon.ico">
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/soccer/favicons/favicon-120.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/soccer/favicons/favicon-152.png">
+        
+        <!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        
+        <!-- Google Web Fonts
+        ================================================== -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CSource+Sans+Pro:400,700" rel="stylesheet">
+        
+        <!-- CSS
+        ================================================== -->
+        <!-- Preloader CSS -->
+        <link href="/assets/css/preloader.css" rel="stylesheet">
+        
+        <!-- Vendor CSS -->
+        <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/assets/fonts/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+        <link href="/assets/vendor/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
+        <link href="/assets/vendor/slick/slick.css" rel="stylesheet">
+        
+        <!-- Template CSS-->
+        <link href="/assets/css/content.css" rel="stylesheet">
+        <link href="/assets/css/components.css" rel="stylesheet">
+        <link href="/assets/css/style.css" rel="stylesheet">
+        
+        <!-- Custom CSS-->
+        <link href="/assets/css/custom.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    
 
-  <body>
-    <% flash.each do |name, message| %>
-         <div class="alert alert-<%=name%> alert-dismissible fade show" role="alert">
-         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-          </button>
-          <%= message %>
-          </div>
-      <% end %>
-    <a href='/'>Home</a>
-    <% if current_user %>
-    <a href="/users/<%= current_user.id %>"><%= current_user.full_name %></a>
-    <a href='/logout'>Logout</a>
-    <% else %>
-    <a href='/login'>Sign in</a>
-    <% end %>
-    <%= yield %>
 
-   
+            </head>
+    <body class="template-soccer">
+        <div class="site-wrapper clearfix">
+            <div class="site-overlay"></div>
+            
+            
+     
+    <!-- Header
+    ================================================== -->
+  
+   <!-- Header Desktop -->
+<header class="header">  
+    
+    <!-- Header Primary -->
+    <div class="header__primary">
+        <div class="container">
+            <div class="header__primary-inner">
+                
+                <!-- Header Logo -->
+                <div class="header-logo">
+                    <a href="/">
+                        <img src="/assets/images/logo.png" srcset="/assets/images/logo.png" alt="logo" class="header-logo__img"></a>
+                </div>
+                <!-- Header Logo / End -->
+                
+                <!-- Main Navigation -->
+                <nav class="main-nav clearfix">
+                    <ul class="main-nav__list">
+                        <li class="active"><a href="/">HOME</a></li>
+                        <li class="header-login_button"><a href="/login">Sign In</a></li>
+                    </ul>
+                </nav>
+                <!-- Main Navigation / End -->
+            </div>
+        </div>
+    </div>
+    <!-- Header Primary / End -->
+    
+</header>
+<!-- Header / End -->                
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-  </body>
+      <%= yield %>
+            
+            
+            
+    
+
+            
+      <!-- Footer
+      ================================================== -->
+      <footer id="footer" class="footer">
+          
+          <!-- Footer Widgets -->
+          <div class="footer-widgets">
+              <div class="footer-widgets__inner">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-sm-6 col-md-3">
+                              <div class="footer-col-inner">
+                                  
+                                  <!-- Footer Logo -->
+                                  <div class="footer-logo footer-logo--has-txt">
+                                      <a href="index.html">
+                                          <img src="/assets/images/logo.png" alt="Jogo" class="footer-logo__img">                                                
+                                      </a>
+                                  </div>
+                                  <!-- Footer Logo / End -->
+                                  
+                                  <!-- Widget: Contact Info -->
+                                  <div class="widget widget--footer widget-contact-info">
+                                      <div class="widget__content">
+                                          <div class="widget-contact-info__desc">
+                                              <p>Lorem ipsum dolor sit amet, consectetur cing elit, sed do eiusmod tempor incididunt uten labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                          </div>
+                                          <div class="widget-contact-info__body info-block">
+                                              <div class="info-block__item">
+                                                  <svg role="img" class="df-icon df-icon--soccer-ball">
+                                                  <use xlink:href="assets/images/icons-soccer.svg#soccer-ball"/>
+                                                  </svg>
+                                                  <h6 class="info-block__heading">Contact Us</h6>
+                                                  <a class="info-block__link" href="mailto:info@alchemists.com">info@alchemists.com</a>
+                                              </div>
+                                              <div class="info-block__item">
+                                                  <svg role="img" class="df-icon df-icon--whistle">
+                                                  <use xlink:href="assets/images/icons-soccer.svg#whistle"/>
+                                                  </svg>
+                                                  <h6 class="info-block__heading">Join Our Team!</h6>
+                                                  <a class="info-block__link" href="mailto:tryouts@alchemists.com">tryouts@alchemists.com</a>
+                                              </div>
+                                              <div class="info-block__item info-block__item--nopadding">
+                                                  <ul class="social-links">
+                                                      <li class="social-links__item">
+                                                          <a href="#" class="social-links__link"><i class="fa fa-facebook"></i> Facebook</a>
+                                                      </li>
+                                                      <li class="social-links__item">
+                                                          <a href="#" class="social-links__link"><i class="fa fa-twitter"></i> Twitter</a>
+                                                      </li>
+                                                      <li class="social-links__item">
+                                                          <a href="#" class="social-links__link"><i class="fa fa-google-plus"></i> Google+</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <!-- Widget: Contact Info / End -->
+                              </div>
+                          </div>
+                          
+
+                                  
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+          <!-- Footer Widgets / End -->
+      </footer>
+      <!-- Footer / End -->
+            
+            <!-- Javascript Files
+              ================================================== -->
+            <!-- Core JS -->
+            <script src="/assets/vendor/jquery/jquery.min.js"></script>
+            <script src="/assets/js/core-min.js"></script>
+            <script src="/assets/jquery.validate/jquery.validate.min.js"></script>
+            <script src="/assets/js/moment.min.js"></script>
+            <script src="/assets/js/bootstrap-datetimepicker.min.js"></script>
+                        <!-- Vendor JS -->
+            <script src="/assets/vendor/twitter/jquery.twitter.js"></script>
+            
+            
+            <!-- Template JS -->
+            <script src="/assets/js/init.js"></script>
+            <script src="/assets/js/custom.js"></script>
+            <script src="/assets/js/login.js"></script>
+            <script src="/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.js"></script>
+            <script src="/assets/js/search.js"></script>
+            <script>
+                
+            </script>
+    </body>
 </html>
+
