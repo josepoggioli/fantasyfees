@@ -14,3 +14,5 @@
 <%= form_tag "/leagues/#{@league.id}", method: :delete do %>
   <input class="btn btn-danger" type="submit" value="Delete">
 <% end %>
+<br/>
+<a href="/leagues/<%= @league.id %>">back to league</a>

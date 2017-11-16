@@ -1,23 +1,36 @@
 <h3><a href='/leagues/new'>Create League</a></h3>
 <h3><a href='/leagues/join'>Join League</a></h3>
-<table>
-  <tr>
-    <th>League</th>
-    <th>Fee</th>
-    <th>Paid</th>
-  </tr>
-  <% current_user.leagues.each do |league|  %>
-  <tr>  
-    <td><a href="/leagues/<%= league.id %>"><%= league.name %></a></td>
-    <td>$<%= league.fee %></td>
-    <td>
-    <% if league.user_leagues.find_by(user_id:current_user.id).isFeePaid? %>
-    <img src="/assets/paid.png" alt="paid" height="35px" width="35px"> 
-    <% else %>
-    <img src="/assets/not-paid.png" alt="not-paid" height="35px" width="35px">
-    <% end %>
-    </td>
-  </tr>
-  <% end %>
-</table>
+<div class="card card--has-table">
+  <div class="card__header">
+    <h4>Leagues</h4>
+  </div>
+  <div class="card__content">
+    <div class="table-responsive">
+      <table class="table team-leader" width="200">
+        <thead>
+          <tr>
+            <th class="team-roster-table__header">Name</th>
+            <th class="team-roster-table__name">Fee</th>
+            <th class="team-roster-table__name">Paid</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% current_user.leagues.each do |league|  %>
+          <tr>  
+            <td><a href="/leagues/<%= league.id %>"><%= league.name %></a></td>
+            <td>$<%= league.fee %></td>
+            <td>
+            <% if league.user_leagues.find_by(user_id:current_user.id).isFeePaid? %>
+            <img src="/assets/paid.png" alt="paid" height="35px" width="35px"> 
+            <% else %>
+            <img src="/assets/not-paid.png" alt="not-paid" height="35px" width="35px">
+            <% end %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+</div>
 <br/>
+

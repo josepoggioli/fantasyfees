@@ -1,7 +1,11 @@
 <h1>User Info</h1>
 <p><strong>Name: </strong><%= current_user.full_name %></p>
 <p><strong>Email: </strong><%= current_user.email %></p>
+<div class="side-by-side">
 <a class="btn btn-info"  href="/users/<%= current_user.id %>/edit">Edit</a>
+</div>
+<div class="side-by-side">
 <%= form_tag "/users/#{current_user.id}", method: :delete do %>
   <input class="btn btn-danger" type="submit" value="Delete">
 <% end %>
+</div>

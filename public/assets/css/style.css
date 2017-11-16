@@ -21461,3 +21461,7 @@ td.team-leader__goals {
 .mb-30 {
   margin-bottom: 30px !important;
 }
+
+.side-by-side {
+  float: left;
+}

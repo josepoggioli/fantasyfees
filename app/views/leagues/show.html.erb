@@ -1,4 +1,10 @@
-<h1><%= @league.name %>
+<div class="card card--has-table">
+  <div class="card__header">
+    <h4><%= @league.name %></h4>
+  </div>
+</div>
+
+<h1>
   <% if @league.user_leagues.find_by(user_id:current_user.id).admin %>
   <a href="/leagues/<%=@league.id%>/edit"><button type="button" class="btn btn-primary">Settings</button></a>
   <% end %>
@@ -11,13 +17,12 @@
 <% end %>
 </h4>
 <h4>Fee $<%= @league.fee %> Due date: <%= @league.fee_due_date %></h4>
-<% if !current_user.user_leagues.find_by(league_id:@league.id).isFeePaid? %>
-<a href="/payments/new/<%= @league.user_leagues.find_by(user_id:current_user.id).id %>" class="btn btn-warning" role="button">Make a payment</a>
-<% else %>
-<a href="/payments/new/<%= @league.user_leagues.find_by(user_id:current_user.id).id %>" class="btn btn-warning disabled" role="button" aria-disabled="false">Make a payment</a>
-<% end %>
-<table>
-  <tr>
+
+<div class="card card--has-table">
+  <div class="card__content">
+    <div class="table-responsive">
+      <table class="table team-leader" width="200">
+     <tr>
     <th>Members</th>
     <th>Paid</th>
     <th>Total</th>
@@ -43,10 +48,21 @@
     <% end %>
   </tr>
   <% end %>
-</table>
+      </table>
+    </div>
+</div>
+<br/>
+
+<% if !current_user.user_leagues.find_by(league_id:@league.id).isFeePaid? %>
+<a href="/payments/new/<%= @league.user_leagues.find_by(user_id:current_user.id).id %>" class="btn btn-warning" role="button">Make a payment</a>
+<% else %>
+<a href="/payments/new/<%= @league.user_leagues.find_by(user_id:current_user.id).id %>" class="btn btn-warning disabled" role="button" aria-disabled="false">Make a payment</a>
+<% end %>
 <% if @league.user_leagues.find_by(user_id:current_user.id).admin %>
   <a href="/leagues/<%= @league.id %>/invitation"><button type="button" class="btn btn-primary">Send Invitation</button></a>
 <% end %>
+<br/><br/>
+
 <h2>Activity</h2>
 <ul>
   <%  current_user.user_leagues.find_by(league_id:@league.id).payments.each do |payment|%>
