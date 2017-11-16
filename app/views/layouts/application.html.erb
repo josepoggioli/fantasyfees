@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
     <head>
         
         <!-- Basic Page Needs
         ================================================== -->
-        <title>Jogo - Soccer Club & News HTML Template</title>
+        <title>Fantasy Fees</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="csrf_token" content="dX8sJxwGcv9Wbe2eb4hKtqWoatEf8K6mkhrb5RAq"/>
@@ -79,7 +79,12 @@
                 <nav class="main-nav clearfix">
                     <ul class="main-nav__list">
                         <li class="active"><a href="/">HOME</a></li>
+                        <% if current_user %>
+                        <li class="header-login_button"><a href="/users/<%= current_user.id %>"><%= current_user.full_name %></a></li>
+                        <li class="header-login_button"><a href='/logout'>Logout</a></li>
+                        <% else %>
                         <li class="header-login_button"><a href="/login">Sign In</a></li>
+                        <% end %>
                     </ul>
                 </nav>
                 <!-- Main Navigation / End -->
@@ -121,34 +126,21 @@
                                   <!-- Widget: Contact Info -->
                                   <div class="widget widget--footer widget-contact-info">
                                       <div class="widget__content">
-                                          <div class="widget-contact-info__desc">
-                                              <p>Lorem ipsum dolor sit amet, consectetur cing elit, sed do eiusmod tempor incididunt uten labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                                          </div>
                                           <div class="widget-contact-info__body info-block">
                                               <div class="info-block__item">
                                                   <svg role="img" class="df-icon df-icon--soccer-ball">
                                                   <use xlink:href="assets/images/icons-soccer.svg#soccer-ball"/>
                                                   </svg>
                                                   <h6 class="info-block__heading">Contact Us</h6>
-                                                  <a class="info-block__link" href="mailto:info@alchemists.com">info@alchemists.com</a>
-                                              </div>
-                                              <div class="info-block__item">
-                                                  <svg role="img" class="df-icon df-icon--whistle">
-                                                  <use xlink:href="assets/images/icons-soccer.svg#whistle"/>
-                                                  </svg>
-                                                  <h6 class="info-block__heading">Join Our Team!</h6>
-                                                  <a class="info-block__link" href="mailto:tryouts@alchemists.com">tryouts@alchemists.com</a>
+                                                  <a class="info-block__link" href="mailto:josepoggioli@hotmail.com">josepoggioli@hotmail.com</a>
                                               </div>
                                               <div class="info-block__item info-block__item--nopadding">
                                                   <ul class="social-links">
                                                       <li class="social-links__item">
-                                                          <a href="#" class="social-links__link"><i class="fa fa-facebook"></i> Facebook</a>
+                                                          <a href="https://www.facebook.com/jose.poggioli" class="social-links__link"><i class="fa fa-facebook"></i> Facebook</a>
                                                       </li>
                                                       <li class="social-links__item">
-                                                          <a href="#" class="social-links__link"><i class="fa fa-twitter"></i> Twitter</a>
-                                                      </li>
-                                                      <li class="social-links__item">
-                                                          <a href="#" class="social-links__link"><i class="fa fa-google-plus"></i> Google+</a>
+                                                          <a href="https://twitter.com/josepoggioli" class="social-links__link"><i class="fa fa-twitter"></i> Twitter</a>
                                                       </li>
                                                   </ul>
                                               </div>
