@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
 
   get "/" => "pages#index"
+  get "/landing" => "pages#landing"
 
   get "/signup" => "users#new"
   post "/users" => "users#create"
