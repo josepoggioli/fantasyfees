@@ -5,6 +5,10 @@ class UserLeaguesController < ApplicationController
   end
 
   def edit
+    if flash[:success] == "Payment confirmed!"
+      @alert_success = true
+      @alert_text = "Payment confirmed!"
+    end
     @user_league = UserLeague.find(params[:id])
     payment = Payment.new(
       amount: params[:amount].to_i*100,

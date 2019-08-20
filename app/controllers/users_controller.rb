@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
 
   def new
+    if flash[:warning] == "Invalid email or password"
+      @alert_warning = true
+      @alert_text = "Invalid email or password"
+    end
   end
 
   def create

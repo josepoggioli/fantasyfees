@@ -29,7 +29,7 @@ class PaymentsController < ApplicationController
           currency: 'usd'
         )
 
-        flash[:primary] = "Your $#{payment.pretty_amount} has been submitted!"
+        flash[:success] = "Your payment has been submitted!"
         redirect_to "/leagues/#{payment.user_league.league.id}"
       else
         puts payment.errors.messages
@@ -47,6 +47,10 @@ class PaymentsController < ApplicationController
   end
 
   def error
+    if flash[:warning] == "Your payment is larger than your balance. Please try your payment again."
+      @alert_warning = true
+      @alert_text = "Your payment is larger than your balance. Please try your payment again."
+    end
   end
 
   def description

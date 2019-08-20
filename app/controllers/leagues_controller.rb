@@ -1,7 +1,17 @@
 class LeaguesController < ApplicationController
-
+  
   def new
     if current_user
+      if flash[:warning] == "There was an error with the user addition to the league."
+        @alert_warning = true
+        @alert_text = "There was an error with the user addition to the league."
+      elsif flash[:warning] == "There was an error and the league was not created."
+        @alert_warning = true
+        @alert_text = "There was an error and the league was not created."
+      elsif flash[:success] == "Successfully Logged in!"
+        @alert_success = true
+        @alert_text = "Successfully Logged in!"
+      end
       render 'new.html.erb'
     else
       flash[:warning] = "You need to sign in to be able to create a league."
@@ -21,7 +31,6 @@ class LeaguesController < ApplicationController
         user_id: current_user.id,
         league_id: @league.id,
         admin: true,
-        fee_payed: false
       )
       if user_league.save
         flash[:success] = "#{@league.name} league successfully created!"
@@ -39,6 +48,19 @@ class LeaguesController < ApplicationController
 
   def show
     @league = League.find(params[:id])
+    if flash[:success] == "#{@league.name} league successfully created!"
+      @alert_success = true
+      @alert_text = "#{@league.name} league successfully created!"
+    elsif flash[:success] == "Changes succesfully saved!"
+      @alert_success = true
+      @alert_text = "Changes succesfully saved!"
+    elsif flash[:success] == "You have successfully joined the league!"
+      @alert_success = true
+      @alert_text = "You have successfully joined the league!"
+    elsif flash[:success] == "Your payment has been submitted!"
+      @alert_success = true
+      @alert_text = "Your payment has been submitted!"
+    end
   end
 
   def edit
@@ -46,12 +68,16 @@ class LeaguesController < ApplicationController
   end
 
   def update
+    if flash[:warning] == "Changes were not saved."
+      @alert_warning = true
+      @alert_text = "Changes were not saved."
+    end
     @league = League.find(params[:id])
     @league.name = params[:name]
     @league.fee_due_date = params[:fee_due_date]
     @league.fee = params[:fee]
     if @league.save
-      flash[:primary] = "Changes succesfully saved!"
+      flash[:success] = "Changes succesfully saved!"
       redirect_to "/leagues/#{@league.id}"
     else
       flash[:warning] = "Changes were not saved."
@@ -71,6 +97,10 @@ class LeaguesController < ApplicationController
   end  
 
   def join
+    if flash[:warning] == "There was an error adding you to the league."
+      @alert_warning = true
+      @alert_text = "There was an error adding you to the league."
+    end
   end
 
   def new_join
@@ -88,7 +118,6 @@ class LeaguesController < ApplicationController
         user_id: current_user.id,
         league_id: @league.id,
         admin: false,
-        fee_payed: false
       )
       if user_league.save
         flash[:success] = "You have successfully joined the league!"

@@ -1,6 +1,13 @@
 class SessionsController < ApplicationController
 
   def new 
+    if flash[:warning] == "You need to sign in to be able to create a league."
+      @alert_warning = true
+      @alert_text = "You need to sign in to be able to create a league."
+    elsif flash[:warning] == "Invalid email or password."
+      @alert_warning = true
+      @alert_text = "Invalid email or password."
+    end
     @create_league = false
     if flash[:warning]== "You need to sign in to be able to create a league."
       @create_league = true
